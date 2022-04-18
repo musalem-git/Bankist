@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bankist</title>
+    <link rel="shortcut icon" href="./icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">  
+          <p class="welcome__msg">Log in to get started</p>
+          <img src="./logo.png" alt="LOGO" />
+          <form action="POST" class="login">
+            <input
+              class="login__input"
+              type="text"
+              name="user"
+              placeholder="User"
+            />
+            <input
+              class="login__input"
+              type="password"
+              name="pin"
+              placeholder="PIN"
+              maxlength="4"
+            />
+            <button id="btn_login">&rarr;</button>
+          </form>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="balance">
+          <div>
+            <p class="balance__label">Current balance</p>
+            <p class="balance__date">As of <span>05/03/2037</span></p>
+          </div>
+          <p class="balance__amount">0000&#8364;</p>
+        </div>
+        <div class="transactions">
+          <div class="movements move--border">
+            <div class="movements__row">
+              <div>
+                <p class="movements__type deposite">2 deposite</p>
+                <p class="movements__date">3 days ago</p>
+              </div>
+              <p class="movements__amount">4000&#8364;</p>
+            </div>
+            <div class="movements__row">
+              <div>
+                <p class="movements__type withdraw">1 withdrawal</p>
+                <p class="movements__date">01/10/2037</p>
+              </div>
+              <p class="movements__amount">-378&#8364;</p>
+            </div>
+          </div>
+          <div class="operation__msg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, in!</div>
+          <div class="operations operations__transfer move--border">
+            <p class="operations__type">Transfer money</p>
+            <form action="" class="operations__form">
+              <input type="text" name="receiver" class="operations__input" id="transfer"/>
+              <input
+              type="number"
+              name="trans_amount"
+              class="operations__input"
+              id="tamount"
+              />
+              <button class="btn" id="btn_transfer">&rarr;</button>
+              <label for="transfer" class="operation__label">Transfer to</label>
+              <label for="tamount" class="operation__label">Amount</label>
+            </form>
+          </div>
+          <div class="operation__msg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, in!</div>
+          <div class="operations operations__request move--border">
+            <p class="operations__type">Request loan</p>
+            <form action="" class="operations__form">
+              <input type="number" name="loan" class="operations__input" id="lamount"/>
+              <button class="btn" id="btn_loan">&rarr;</button>
+              <label for="lamount" class="operation__label">Amount</label>
+            </form>
+          </div>
+          <div class="operation__msg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, in!</div>
+          <div class="operations operations__close move--border">
+            <p class="operations__type">Close account</p>
+            <form action="" class="operations__form">
+              <input
+              type="text"
+              class="operations__input"
+              name="user_confirm"
+              id="user-confirm"
+              />
+              <input type="text" class="operations__input" name="pin_confirm" id="pin-confirm"/>
+              <button class="btn" id="btn_close">&rarr;</button>
+              <label for="user-confirm" class="operation__label">Confirm user</label>
+              <label for="pin-confirm" class="operation__label">Confirm PIN</label>
+            </form>
+          </div>
+        </div>
+        <div class="info">
+          <div class="summary">
+            <p class="summary__label">
+              in <span class="summary__value summary__value--in">0000&#8364</span>
+            </p>
+            <p class="summary__label">
+              out <span class="summary__value summary__value--out">0000&#8364</span>
+            </p>
+            <p class="summary__label">
+              interest
+              <span class="summary__value summary__value--interest">0000&#8364</span>
+            </p>
+            <button class="summary__sort" id="btn_sort">&darr; sort</button>
+          </div>
+          <p class="timer">You will be logged in <span>05:00</span></p>
+        </div>
+      </div>
+    </main>
+    <!-- <div class="timer-set">500</div> -->
+    <script src="script.js"></script>
+    <!-- <script src="script1.js"></script> -->
+  </body>
+</html>
